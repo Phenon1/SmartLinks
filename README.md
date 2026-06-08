@@ -31,7 +31,7 @@ GET http://localhost:8080/s/promo?country=RU
 User-Agent: Mozilla/5.0 (iPhone) Safari/604.1
 ```
 
-В Swagger не стоит нажимать Execute на `GET /s/{code}`: это настоящий редирект, и браузерный `fetch` в Swagger UI может упереться в CORS после перехода на внешний URL. Для проверки правил в Swagger используйте `GET /s/{code}/resolve` - он возвращает JSON-решение без редиректа.
+Для проверки правил в Swagger используйте `GET /s/{code}/resolve` - он возвращает JSON-решение без редиректа.
 
 ## Архитектура
 
