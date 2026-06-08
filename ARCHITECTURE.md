@@ -140,7 +140,7 @@ flowchart LR
     User --> Target
 ```
 
-## Информационная схема
+## Модели данных
 
 ```mermaid
 classDiagram
