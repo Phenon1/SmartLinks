@@ -211,13 +211,13 @@ classDiagram
 
 ## Используемые шаблоны
 
-- Specification: каждое условие реализует общий интерфейс `IRuleCondition` и самостоятельно решает, подходит ли `RuleHttpContext`.
-- Chain of Responsibility: правила проверяются последовательно, первое совпавшее правило завершает выбор URL.
-- Dependency Injection: зависимости регистрируются через `AddSmartLinks` в `RedirectService` и `AddRulesEngine` в `RulesService`.
-- Options pattern: настройки читаются через `SmartLinkOptions` и `RulesOptions`.
-- DTO/Contract pattern: `SmartLinks.Contracts` задает стабильный контракт между сервисами.
-- Cached Repository pattern: `RulesCatalog` хранит JSON-каталог правил в памяти и перечитывает его только после изменения файлов в `RulesService/Rules`.
-- Dynamic Plugin pattern: DLL-файлы в `RulesService/Plugins` добавляют новые реализации `IRuleCondition`, которые используются из JSON по полю `Type`.
+- **Спецификация** : каждое условие правила реализует `IRuleCondition`.
+- **Цепочка обязанностей** : правила проверяются по порядку до первого совпадения.
+- **DI** : зависимости регистрируются через `AddSmartLinks` и `AddRulesEngine`.
+- **Options** : настройки читаются через `RulesOptions` и `SmartLinkOptions`.
+- **DTO/Contract** : `SmartLinks.Contracts` задает контракт между сервисами.
+- **Dynamic Plugin pattern** : DLL-файлы в `RulesService/Plugins` добавляют новые условия без изменения `RulesService`.
+- **Cached Repository pattern** : JSON-каталог правил хранится в памяти и перечитывается только после изменений в `RulesService/Rules`.
 
 ## Описание интеграций
 
