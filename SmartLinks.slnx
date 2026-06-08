@@ -1,10 +1,13 @@
 <Solution>
+  <Folder Name="/Элементы решения/">
+    <File Path="Заметки для Отчёта.txt" />
+  </Folder>
   <Project Path="docker-compose.dcproj">
     <Build />
   </Project>
   <Project Path="RedirectService.Tests/Tests.csproj" />
   <Project Path="RedirectService/RedirectService.csproj" />
-  <Project Path="RulesService/RulesService.csproj" />
   <Project Path="RulePlugins.Core/RulePlugins.Core.csproj" />
+  <Project Path="RulesService/RulesService.csproj" />
   <Project Path="SmartLinks.Contracts/SmartLinks.Contracts.csproj" />
 </Solution>

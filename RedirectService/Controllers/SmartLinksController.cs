@@ -16,6 +16,7 @@ public class SmartLinksController : ControllerBase
     }
 
     [HttpGet("{code}")]
+    [ApiExplorerSettings(IgnoreApi = true)] 
     public async Task<IActionResult> RedirectByCode(string code)
     {
         var decision = await _rulesClient.HandleAsync(HttpContext, code);
