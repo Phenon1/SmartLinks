@@ -1,0 +1,74 @@
+{
+  "Links": [
+    {
+      "Code": "promo_new",
+      "FallbackUrl": "/promo",
+      "Rules": [
+        {
+          "Name": "russia-mobile-morning",
+          "TargetUrl": "/ru/morning",
+          "Conditions": [
+            {
+              "Type": "country",
+              "Parameters": {
+                "is": "RU"
+              }
+            },
+            {
+              "Type": "device",
+              "Parameters": {
+                "is": "mobile,tablet"
+              }
+            },
+            {
+              "Type": "time",
+              "Parameters": {
+                "from": "06:00",
+                "to": "12:00",
+                "utcOffset": "03:00"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "ua-evening",
+          "TargetUrl": "/ua/evening",
+          "Conditions": [
+            {
+              "Type": "country",
+              "Parameters": {
+                "is": "US"
+              }
+            },
+            {
+              "Type": "time",
+              "Parameters": {
+                "from": "18:00",
+                "to": "08:00",
+                "utcOffset": "03:00"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "desktop-chrome",
+          "TargetUrl": "/chrome",
+          "Conditions": [
+            {
+              "Type": "device",
+              "Parameters": {
+                "is": "desktop"
+              }
+            },
+            {
+              "Type": "browser",
+              "Parameters": {
+                "is": "chrome,edge"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

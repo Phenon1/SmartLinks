@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "RulePlugins.Core/1.0.0": {
+        "dependencies": {
+          "SmartLinks.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "RulePlugins.Core.dll": {}
+        }
+      },
+      "SmartLinks.Contracts/1.0.0": {
+        "runtime": {
+          "SmartLinks.Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RulePlugins.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SmartLinks.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
