@@ -119,13 +119,13 @@ JSON-правило может использовать DLL-условие по 
 
 ## Паттерны и сложность
 
-- Specification: каждое условие правила реализует `IRuleCondition`.
-- Chain of Responsibility: правила проверяются по порядку до первого совпадения.
-- DI: зависимости регистрируются через `AddSmartLinks` и `AddRulesEngine`.
-- Options pattern: настройки читаются через `RulesOptions` и `SmartLinkOptions`.
-- DTO/Contract pattern: `SmartLinks.Contracts` задает контракт между сервисами.
-- Dynamic Plugin pattern: DLL-файлы в `RulesService/Plugins` добавляют новые условия без изменения `RulesService`.
-- Cached Repository pattern: JSON-каталог правил хранится в памяти и перечитывается только после изменений в `RulesService/Rules`.
+- **Спецификация** : каждое условие правила реализует `IRuleCondition`.
+- **Цепочка обязанностей** : правила проверяются по порядку до первого совпадения.
+- **DI** : зависимости регистрируются через `AddSmartLinks` и `AddRulesEngine`.
+- **Options** : настройки читаются через `RulesOptions` и `SmartLinkOptions`.
+- **DTO/Contract** : `SmartLinks.Contracts` задает контракт между сервисами.
+- **Dynamic Plugin pattern** : DLL-файлы в `RulesService/Plugins` добавляют новые условия без изменения `RulesService`.
+- **Cached Repository pattern** : JSON-каталог правил хранится в памяти и перечитывается только после изменений в `RulesService/Rules`.
 - Комбинаторный рост правил сдерживается JSON DSL и единым интерфейсом условий.
 
 ## Тесты и покрытие
@@ -134,4 +134,4 @@ JSON-правило может использовать DLL-условие по 
 dotnet test RedirectService.Tests/Tests.csproj --collect:"XPlat Code Coverage"
 ```
 
-Текущий результат: 26 тестов.
+Текущий результат: 34 теста.
